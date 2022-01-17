@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns th="http://www.phymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div class="form">
+        <ul class="tab-group">
+            <li class="tab active"><a href="#sigup">Registrate</a></li>
+            <li class="tab"><a href="#login">Igresa</a></li>
+        </ul>
+        <form action="/Registrar">
+            <div class="tab content">
+            <div id= "sigup">
+                <h1>Registrarse aqui</h1>
+                <h1><span th:utext></span></h1>
+                <form action= "/ingresarUsuario"method="post"></form>
+                <div class="top row">
+                    <div class="field-wrap">
+                    <label>Nombre</label>
+                    <input type="text" name="Nombre">
+                </div>
+                <div class="top row">
+                    <div class="field-wrap">
+                    <label>Apellido</label>
+                       <input type="text" name="Apellido">
+                </div>
+                <div class="top row">
+                    <div class="field-wrap">
+                    <label>Correo</label>
+                    <input type="text" name="Correo">
+                </div>
+                <div class="top row">
+                    <div class="field-wrap">
+                    <label>Contraseña</label>
+                    <input type="text" name="Contrasena">
+                </div>
+                <button type="submit" class="button- button-block">Registrarse</button>
+            </div>
+        </div>
+    </form>
+    <div id="login"> 
+        <h1>Bienvenido al sistema</h1>
+        <form action="/Validar" method="post">
+            <div class="field">
+                <label>
+                    Correo
+                </label>
+                <input type="correo" name="correo">
+            </div>
+            <div class="field">
+                <label>
+                    Contrasena
+                </label>
+                <input type="password" name="pass">
+            </div>
+            <!--<p class="forgot"><a href="Olvidaste tu contraseña"></a></p>//Solo en dado caso que se quiera realizar la funcion-->
+            <button class="button button-block">Iniciar sesión</button>
+        </form>
+    </div>
+    <script src="js/inicio.js"></script>
+</body>
+</html>
